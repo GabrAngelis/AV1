@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "nome": "Admin",
+    "telefone": "123456789",
+    "endereco": "Rua dos admin, 1 - SJC",
+    "usuario": "admin",
+    "senha": "admin123",
+    "nivelPermissao": "Administrador"
+  },
+  {
+    "id": "2",
+    "nome": "Engenheiro",
+    "telefone": "987654321",
+    "endereco": "Rua dos engenheiros, 2 - SJC",
+    "usuario": "engenheiro",
+    "senha": "eng123",
+    "nivelPermissao": "Engenheiro"
+  },
+  {
+    "id": "3",
+    "nome": "Operador",
+    "telefone": "111111111",
+    "endereco": "Rua dos operadores, 3 - SJC",
+    "usuario": "operador",
+    "senha": "op123",
+    "nivelPermissao": "Operador"
+  }
+]
