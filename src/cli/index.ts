@@ -29,8 +29,10 @@ engenheiro.salvarFuncionario()
 operador.salvarFuncionario()
 
 console.log("Funcionários criados:")
-console.log(`${admin.nome} | Nível: ${admin.nivelPermissao} | Usuário: admin / Senha: admin`)
-console.log(`${engenheiro.nome} | Nível: ${engenheiro.nivelPermissao} | Usuário: engenheiro / Senha: eng`)
-console.log(`${operador.nome} | Nível: ${operador.nivelPermissao} | Usuário: operador / Senha: op`)
+console.log(`${admin.nome} | Nível: ${admin.nivelPermissao} | Usuário: admin / Senha: admin123`)
+console.log(`${engenheiro.nome} | Nível: ${engenheiro.nivelPermissao} | Usuário: engenheiro / Senha: eng123`)
+console.log(`${operador.nome} | Nível: ${operador.nivelPermissao} | Usuário: operador / Senha: op123`)
 
 console.log("\nAmbiente pronto. Execute o menu para continuar.\n")
+
+//181226
