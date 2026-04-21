@@ -1,0 +1,25 @@
+[
+  {
+    "pecas": [],
+    "etapas": [
+      {
+        "nome": "cons",
+        "prazo": "agora",
+        "status": "Pendente",
+        "funcionarios": []
+      },
+      {
+        "nome": "aa",
+        "prazo": "now",
+        "status": "Pendente",
+        "funcionarios": []
+      }
+    ],
+    "testes": [],
+    "codigo": "123",
+    "modelo": "voa",
+    "tipo": "Militar",
+    "capacidade": 40,
+    "alcance": 40
+  }
+]

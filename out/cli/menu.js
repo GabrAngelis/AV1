@@ -66,9 +66,10 @@ Aeronave atual: ${(aeronaveAtual === null || aeronaveAtual === void 0 ? void 0 :
 6 - Criar Etapa
 7 - Iniciar Etapa
 8 - Finalizar Etapa
-9 - Adicionar Teste
-10 - Gerar Relatório
-11 - Criar Funcionário
+9 - Listar Etapas
+10 - Adicionar Teste
+11 - Gerar Relatório
+12 - Criar Funcionário
 0 - Sair
 `);
     const opcao = await perguntar("Escolha: ");
@@ -98,12 +99,15 @@ Aeronave atual: ${(aeronaveAtual === null || aeronaveAtual === void 0 ? void 0 :
             await finalizarEtapa();
             break;
         case "9":
-            await adicionarTestes();
+            listarEtapas();
             break;
         case "10":
-            await gerarRelatorio();
+            await adicionarTestes();
             break;
         case "11":
+            await gerarRelatorio();
+            break;
+        case "12":
             await criarFuncionario();
             break;
         case "0":
@@ -257,6 +261,18 @@ async function finalizarEtapa() {
     catch (e) {
         console.log(e.message);
     }
+    menu();
+}
+function listarEtapas() {
+    if (!aeronaveAtual) {
+        console.log("Selecione uma aeronave primeiro.");
+        return menu();
+    }
+    if (aeronaveAtual.etapas.length === 0) {
+        console.log("Nenhuma etapa cadastrada nessa aeronave.");
+        return menu();
+    }
+    aeronaveAtual.listarEtapas();
     menu();
 }
 // Testes

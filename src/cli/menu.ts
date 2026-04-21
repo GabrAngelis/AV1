@@ -72,9 +72,10 @@ Aeronave atual: ${aeronaveAtual?.codigo || "Nenhuma"}
 6 - Criar Etapa
 7 - Iniciar Etapa
 8 - Finalizar Etapa
-9 - Adicionar Teste
-10 - Gerar Relatório
-11 - Criar Funcionário
+9 - Listar Etapas
+10 - Adicionar Teste
+11 - Gerar Relatório
+12 - Criar Funcionário
 0 - Sair
 `)
 
@@ -89,9 +90,10 @@ Aeronave atual: ${aeronaveAtual?.codigo || "Nenhuma"}
         case "6": await criarEtapa(); break
         case "7": await iniciarEtapa(); break
         case "8": await finalizarEtapa(); break
-        case "9": await adicionarTestes(); break
-        case "10": await gerarRelatorio(); break
-        case "11": await criarFuncionario(); break
+        case "9": listarEtapas(); break
+        case "10": await adicionarTestes(); break
+        case "11": await gerarRelatorio(); break
+        case "12": await criarFuncionario(); break
         case "0": rl.close(); break
         default: menu()
     }
@@ -303,6 +305,21 @@ async function finalizarEtapa(){
         console.log(e.message)
     }
 
+    menu()
+}
+
+function listarEtapas(){
+    if(!aeronaveAtual){
+        console.log("Selecione uma aeronave primeiro.")
+        return menu()
+    }
+
+    if(aeronaveAtual.etapas.length === 0){
+        console.log("Nenhuma etapa cadastrada nessa aeronave.")
+        return menu()
+    }
+
+    aeronaveAtual.listarEtapas()
     menu()
 }
 
